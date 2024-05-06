@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usando DOM</title>
+    <style>
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1 class="titulo">Título 1</h1>
+    </header>
+    <main>
+        <section id="noticias" class="caja">
+            <h2>Título 2</h2>
+            <p>Lorem 1</p>
+            <p>Lorem 2</p>
+            <p>Lorem 3</p>
+            <p>Lorem 4</p>
+        </section>
+        <section class="caja lista">
+            <ul>
+                <li>Opción 1</li>
+                <li>Opción 2</li>
+                <li>Opción 3</li>
+                <li>Opción 4</li>
+                <li>Opción 5</li>
+            </ul>
+        </section>
+        <section>
+            <form action="">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre">
+            </form>
+        </section>
+        <input type="button" value="nuevo p" id="nuevoP">
+        <input type="button" value="nuevo li" id="nuevoLi">
+
+    </main>
+    <script>
+    function mostrar() {
+        console.log("hola");
+    }
+
+
+    function proceso() {
+        return "hola";
+    }
+
+    function queDiaEsHoy() {
+        // ......
+        let dia = 3;
+        return dia;
+    }
+
+
+
+        /*const noticias = document.getElementById("noticias");
+        noticias.style.color = "red";*/
+        document.getElementById("noticias").style.color = "red";
+        const lis = document.getElementsByTagName("li");
+        lis[0].style.color = "green";
+        lis[1].style.color = "pink";
+        lis[4].style.color = "brown";
+        lis.item(0).style.fontWeight = "bold";
+        for (const li of lis) {
+            li.style.fontSize = "3rem";
+        }
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].style.textDecoration = "underline";
+        }
+
+        for(let i = 0; i < 10; i += 2) {
+            console.log(i);
+        }
+
+        for(let i = 100; i <= 200; i++) {
+            console.log(i);
+        }
+
+        for(let i = 100; i > 0; i--) {
+            console.log(i);
+        }
+
+        const ps = document.getElementsByTagName("p");
+        for (const p of ps) {
+            p.style.backgroundColor = "#320045";
+        }
+
+        const nombres = document.getElementsByName("nombre");
+        if(nombres.length == 1) {
+            nombres[0].style.backgroundColor = "green";
+        }
+        let cajas = document.getElementsByClassName("caja");
+        for (const caja of cajas) {
+            caja.style.border = "1px solid black";
+            caja.style.marginTop = "10px";
+        }
+        cajas = document.getElementsByClassName("lista caja");
+        for (const caja of cajas) {
+            caja.style.borderRadius = "30px";
+        }
+
+        let elemento = document.querySelector("p");
+        elemento.style.marginLeft = "100px";
+        elemento = document.querySelector("#noticias p:nth-of-type(2)");
+        elemento.style.marginLeft = "200px";
+        elemento = document.querySelector(".caja");
+        elemento.style.fontStyle ="italic";
+
+        let elementos = document.querySelectorAll("section:nth-of-type(2) li");
+        for (const elemento of elementos) {
+            elemento.style.textTransform = "uppercase";
+        }
+
+        function crearP() {
+            for (let i = 0; i < 10; i++) {
+                const p = document.createElement("p");
+                //const texto = document.createTextNode("nuevo párrafo " + i + " de 10");
+                const texto = document.createTextNode(`nuevo párrafo ${i} de 10`);
+                p.appendChild(texto);
+                document.body.appendChild(p);
+            }
+
+        }
+
+        function crearLi() {
+          /*  const li = document.createElement("li");
+            const a = document.createElement("a");
+            const texto = document.createTextNode("ir a google");
+            a.appendChild(texto);
+            a.setAttribute("href", "http://www.google.com");
+            li.appendChild(a);
+            document.querySelector("section:nth-of-type(2) ul").appendChild(li); */
+            const li = document.createElement("li");
+            li.innerHTML = "<a href='http://www.google.com'>ir a google</a>";
+            document.querySelector("section:nth-of-type(2) ul").appendChild(li);
+
+        }
+
+
+
+        document.getElementById("nuevoP").addEventListener("click", crearP);
+        document.getElementById("nuevoLi").addEventListener("click", crearLi);
+        //document.body.innerHTML = "Hola";
+        console.log(document.body.textContent);
+
+        document.querySelector("section li:nth-of-type(2)").textContent = "cambiado";
+        document.querySelector("section li:nth-of-type(3)").innerHTML = "<b>cambiado</b>";
+
+        console.log(lis);
+
+    </script>
+  </body>
+</html>
