@@ -5,7 +5,8 @@ function calcular() {
     // Obtenemos los valores de base y altura, no los input
     const base = document.getElementById("base").value;
     const altura = document.getElementById("altura").value;
-    // Obtenemso el input del area
+    // En este ejercicio no comprobamos si la bse y altura son números, cosa que hicimos en el ejemplo7
+    // Obtenemos el input del area
     const area = document.getElementById("area");
     // Vemos si está marcado el radio del triángulo con su propiedad checked
     if(radioTriangulo.checked == true) {
