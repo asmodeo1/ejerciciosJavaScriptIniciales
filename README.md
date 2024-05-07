@@ -6,4 +6,4 @@ No se incluye el ejemplo1 pues era muy simple.
 
 De los ejercicios 8 al 15 aún no hemos añadido las soluciones JavaScript.
 
-Añadido el ejercicio 8 y 9 sin comentarios
+Añadido el ejercicio 8, 9 y 10 sin comentarios
