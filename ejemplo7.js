@@ -4,12 +4,9 @@ function calcularAreaRectangulo() {
     const altura = document.getElementById("altura");
     const area = document.getElementById("area");
 
-     /* Con parseInt convertimos el valor que hay en el cuadro de texto en número, pues
-    lo que se escribe en un cuadro de texto siempre es texto.
-    Luego comprobamos que sea un entero (sin decimales) usando Number.isInteger.
-    No podemos hacer directamente Number.isInteger(numero.value) pues daría siempre false
-    pues, como hemos dicho, el valor de un cuadro de texto es texto. */
-    if (Number.isInteger(parseInt(base.value)) == false) {
+ /* Comprobamos que sea un entero (sin decimales) usando isNaN con Number y parseInt tal
+    como explicamos en las notas del PDF de los ejercicios */
+    if(isNaN(Number(base.value)) || isNaN(parseInt(base.value))) {
         area.value = "Debes escribir un número en la base";
         // Las dos siguientes instrucciones para una mejor usabilidad
         // Le damos el foco al número
@@ -20,7 +17,9 @@ function calcularAreaRectangulo() {
         Así nos evitamos el else */
         return;
     }
-    if (Number.isInteger(parseInt(altura.value)) == false) {
+ /* Comprobamos que sea un entero (sin decimales) usando isNaN con Number y parseInt tal
+    como explicamos en las notas del PDF de los ejercicios */
+    if(isNaN(Number(altura.value)) || isNaN(parseInt(altura.value))) {
         area.value = "Debes escribir un número en la altura";
         altura.focus();
         altura.select();
