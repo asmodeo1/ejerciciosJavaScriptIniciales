@@ -5,3 +5,5 @@ Primeros ejercicios en JavaScript, usando Bootstrap para el diseño del document
 No se incluye el ejemplo1 pues era muy simple.
 
 De los ejercicios 8 al 15 aún no hemos añadido las soluciones JavaScript.
+
+Añadido el ejercicio 9 sin comentarios
