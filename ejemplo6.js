@@ -2,9 +2,8 @@ function calcularSigno() {
     // Obtenemos los dos cuadros de texto
     const numero = document.getElementById("numero");
     const resultado = document.getElementById("resultado");
-    /* Con parseInt convertimos el valor que hay en el cuadro de texto en número, pues
-    lo que se escribe en un cuadro de texto siempre es texto.
-    Luego comprobamos que sea un entero (sin decimales) usando isNaN con number y parseInt. */
+    /* Comprobamos que sea un entero (sin decimales) usando isNaN con Number y parseInt tal
+    como explicamos en las notas del PDF de los ejercicios */
     if(isNaN(Number(numero.value)) || isNaN(parseInt(numero.value))) {
         resultado.value = "Debes escribir un número";
         // Las dos siguientes instrucciones para una mejor usabilidad
