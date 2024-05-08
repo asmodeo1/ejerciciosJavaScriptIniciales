@@ -8,4 +8,6 @@ Se han añadido las soluciones comentadas a todos los ejercicios, además de act
 
 Se ha añadido una carpeta arrays con los ejercicios y ejemplos de arrays realizados en clase
 
+Se ha añadido una carpeta acumuladores con los ejercicios y ejemplos de acumuladores y contadores realizados en clase
+
 
