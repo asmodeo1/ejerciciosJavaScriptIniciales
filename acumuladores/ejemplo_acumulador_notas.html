@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- En este ejercicio vamos a ir contando el número de aprobados y suspensos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acumulador Notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="ejemplo_acumulador_notas.js" defer></script>
+</head>
+<body>
+    <div class="border rounded-3 bg-body-secondary m-auto mt-4 col-11 col-md-3 p-3">
+        <h1 class="text-center text-danger border-bottom border-black col-12">Acumulador Notas</h1>
+        <label for="nota">nota:</label>
+        <input type="number" id="nota" class="col-12 text-end" placeholder="Nota entre 0 y 10">
+        <div class="d-flex justify-content-around">
+            <input type="button" value="comprobar" id="comprobar" class="btn btn-success mt-4">
+            <input type="button" value="borrar" id="borrar" class="btn btn-danger mt-4">
+        </div>
+        <!-- En este p vamos a mostrar el resultado de la nota o de los errores. Si lo dejamos
+            vacío, cuando se muestre el resultado, se desplazan un poco los botones hacia abajo,
+            pues el p, al no tener contenido, no tiene alto. Una solución fácil es meterle un
+            espacio, pero no podemos ponerlo tal cual sino usar &nbsp; que era otra manera
+            de indicar un espacio. Otra opción sería darle un alto en CSS -->
+        <p id="resultado" class="mt-3 mb-3">&nbsp;</p>
+        <label for="aprobados">Aprobados:</label>
+        <input type="text" id="aprobados" value="0" class="col-12 text-end" disabled readonly>
+        <label for="suspensos">Suspensos:</label>
+        <input type="text" id="suspensos" value="0" class="col-12 text-end" disabled readonly>
+    </div>
+</body>
+</html>
