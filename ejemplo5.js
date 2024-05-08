@@ -7,7 +7,7 @@ function comprobarNota() {
     // != (distinto) == (igual), === (igual estricto) !== (distinto estricto)
     if (nota.value == "") {
         // Cambiamos el texto del párrafo
-        resultado.innerText = "Debes introducir la nota";
+        resultado.textContent = "Debes introducir la nota";
         // Los ponemos en negro pues puede haber quedado en verde o rojo de otra nota 
         resultado.style.color = "black";
         nota.style.color = "black";
@@ -20,7 +20,7 @@ function comprobarNota() {
         al mismo tiempo.
         */
         if (nota.value < 0 || nota.value > 10 ) {
-            resultado.innerText = "La nota debe estar entre 0 y 10";
+            resultado.textContent = "La nota debe estar entre 0 y 10";
             /* Usaremos los valores de CCS pero entre comillas */
             resultado.style.color = "black";
             nota.style.color = "black";
@@ -33,11 +33,11 @@ function comprobarNota() {
                 nota.value tal cual y no la nota. Por ello debemos unir los dos
                 "trozos" con el operador +, que en este caso sirve para concatenar
                 valores. */
-                resultado.innerText = "Está aprobado 🙂 con un " + nota.value;
+                resultado.textContent = "Está aprobado 🙂 con un " + nota.value;
                 resultado.style.color = "green";
                 nota.style.color = "green";
             } else {
-                resultado.innerText = "Está suspenso 😭 con un " + nota.value;
+                resultado.textContent = "Está suspenso 😭 con un " + nota.value;
                 resultado.style.color = "red";
                 nota.style.color = "red";
             }
