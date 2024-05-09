@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="ejemplo13_mejorado.js" defer></script>
+</head>
+<body>
+    <div class="border rounded-3 bg-body-secondary m-auto mt-4 col-11 col-md-3 p-3">
+        <h1 class="text-center text-danger border-bottom border-black col-12">Colores</h1>
+        <p id="texto">Lorem ipsum</p>
+        <label for="rojo" class="col-12 text-center">rojo</label>
+        <!-- Un colo RGB puede ir entre 0 y 255, siendo 0, 0 ,0 negro -->
+        <input type="range" name="rojo" id="rojo" min="0" max="255" value="0" class="col-12">
+        <label for="verde" class="col-12 text-center">verde</label>
+        <input type="range" name="verde" id="verde" min="0" max="255" value="0" class="col-12">
+        <label for="azul" class="col-12 text-center">azul</label>
+        <input type="range" name="azul" id="azul" min="0" max="255" value="0" class="col-12">
+        <input type="text" id="colorElegido" readonly class="col-12 bg-danger-subtle">
+    </div>
+</body>
+</html>
