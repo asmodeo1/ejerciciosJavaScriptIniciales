@@ -11,12 +11,22 @@ function rgb(rojo, verde, azul) {
     //return "rgb("+ rojo + "," + verde + "," + azul + ")";
 }
 function cambiar() {
+    const rojo = document.getElementById("rojo").value;
+    const verde = document.getElementById("verde").value;
+    const azul = document.getElementById("azul").value;
+    //const color = "rgb(" + rojo +"," + verde + "," + azul + ")";
+    // const color = `rgb(${rojo},${verde},${azul})`;
+    const color = rgb(rojo, verde, azul);
+    document.getElementById("texto").style.color = "rgb(valoRojo, valorGreen, valorAzul)";
+    
+    // VERSIÓN CON UNA SOLA LÍNEA
     /* Para cambiar el color debemos tener en cuenta los tres ranges. Por ello usamos
-    la función rgb que hemos creado arriba */
+    la función rgb que hemos creado arriba 
     document.getElementById("texto").style.color = 
         rgb(document.getElementById("rojo").value,
         document.getElementById("verde").value, 
         document.getElementById("azul").value);
+        */
 }
 /* En este ejercicio vamos a usar una misma función para todos los range.
 El evento input se produce cada vez que el usuario va moviendo el "deslizador" del range
