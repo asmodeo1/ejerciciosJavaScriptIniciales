@@ -1,12 +1,16 @@
 function cambiarJavaScript() {
     const javascript = document.getElementById("javascript");
-   /* if (javascript.classList.contains("d-none")) {
+    /* Con el método toggle, si la clase está se la quita, si no está
+    se la pone */
+    javascript.classList.toggle("d-none");
+    // En una sola línea las dos instrucciones anteriores
+    // document.getElementById("javascript").classList.toggle("d-none");
+    /* Sin toggle deberíamos realizar algo como:
+    if (javascript.classList.contains("d-none")) {
         javascript.classList.remove("d-none");
     } else {
         javascript.classList.add("d-none");
     }*/
-    javascript.classList.toggle("d-none");
-    //document.getElementById("javascript").classList.toggle("d-none");
 }
 
 function cambiarJava() {
@@ -20,7 +24,7 @@ function cambiarPhp() {
 }
 
 document.getElementById("btnJavascript").addEventListener("click", cambiarJavaScript);
-/*
+/* En dos líneas lo anterior:
 const btnJavascript = document.getElementById("btnJavascript");
 btnJavascript.addEventListener("click", cambiarJavaScript);
 */

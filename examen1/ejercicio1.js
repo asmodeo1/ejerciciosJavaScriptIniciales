@@ -2,8 +2,8 @@ function convertirCm() {
     const centimetros =  document.getElementById("centimetros");
     if(isNaN(Number(centimetros.value)) || isNaN(parseFloat(centimetros.value))) {
         window.alert("Los centímetros no son válidos");
-        centimetros.focus();
-        centimetros.select();
+        centimetros.focus(); // Le damos el foco
+        centimetros.select(); // Seleccionamos lo que haya escrito
         return;
     }
     const pulgadas = document.getElementById("pulgadas");

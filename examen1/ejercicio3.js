@@ -1,7 +1,8 @@
 function ponerSepia() {
     const foto = document.getElementById("foto");
     foto.style.filter = "sepia()";
-    //document.getElementById("foto").style.filter = "sepia()";
+    // En una sola línea:
+    // document.getElementById("foto").style.filter = "sepia()";
 }
 
 function ponerNormal() {
