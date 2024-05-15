@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotería primitiva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <script src="ejemplo_arrays_primitiva.js" defer></script>
+    <style>
+        #resultado {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(10, 50px);
+            justify-content: center;
+            margin-top: 20px;
+        }
+        #resultado div {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 class="m-auto w-50 text-center">Lotería Primitiva</h1>
+    <input type="button" value="generar" id="generar" 
+        class="btn btn-warning d-block ms-auto me-auto mt-3 mb-4">
+    <section id="resultado"></section>
+    <section id="resumen" class="text-center mt-3 mb-4"></section>
+    <section id="reintegro" class="text-center mt-3 mb-4"></section>
+</body>
+</html>
