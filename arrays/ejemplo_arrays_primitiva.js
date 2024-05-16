@@ -6,10 +6,10 @@ function generar() {
     Una mejor opción podría ser elegir un selector con solo las que la tuviesen, como
     #resultado div.bg-info */
     for (const caja of cajas) {
-        caja.classList.remove("bg-info");
+        caja.classList.remove("bg-info"); // bg-info es una clase de Bootstrap para un color de fondo
     }
     
-    // Como no se peuden repetir números en la lotería, debemos ir guardando los números
+    // Como no se pueden repetir números en la lotería, debemos ir guardando los números
     // en un array para comprobarlo.
     const numeros = [];
     for (let i = 0; i < 6; i++) { // La primitiva son 6 números entre 1 y 49
