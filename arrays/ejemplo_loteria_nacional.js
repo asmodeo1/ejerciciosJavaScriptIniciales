@@ -63,7 +63,8 @@ function generar() {
         const serie = Math.floor(Math.random() * 10 + 1);
         const fraccion = Math.floor(Math.random() * 10 + 1);
         const spanSerie = document.createElement("span");
-        spanSerie.classList.add("fw-bold")
+        spanSerie.classList.add("fw-bold");
+        // Usamos innerText pues un span no tiene textContent
         spanSerie.innerText = " serie: " + serie;
 
         const spanFraccion = document.createElement("span");
