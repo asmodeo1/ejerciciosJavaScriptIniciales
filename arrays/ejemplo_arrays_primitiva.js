@@ -53,7 +53,7 @@ function mostrarResumem(numeros) {
     }
     // En lugar del for podríamos usar el método join de los array que devuelve
     // una cadena de texto con todos los elementos separados por el valor indicado
-    resumen.textContent = numeros.join(" "); */
+    resumen.textContent = numeros.join(" "); 
 }
 
 // Esta función crea las cajas de los 49 números
