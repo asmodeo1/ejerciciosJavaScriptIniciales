@@ -18,7 +18,7 @@ function generar() {
         do {
             // Generamos un número entre 1 y 49
             numero = Math.floor(Math.random() * 49 + 1); 
-            // indexOf devuelve la posición de un elemento dentro de un arra o -1 si no
+            // indexOf devuelve la posición de un elemento dentro de un array o -1 si no
             // lo encuentra. Por eso repetimos el bucle mientras lo encuentre (!= -1)
         } while(numeros.indexOf(numero) != -1);
 
